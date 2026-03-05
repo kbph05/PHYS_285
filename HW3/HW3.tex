@@ -1,0 +1,361 @@
+\documentclass[12pt]{article}
+\usepackage[
+    ignoreheadfoot,
+    top = 1.0 cm,
+    right = 1.5 cm,
+    left = 1.5 cm,
+    bottom = 2.0 cm,
+    footskip = 1.0 cm,
+]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage{setspace}
+\title{PHYS 285 - HW3}
+\author{Kirstin Horvat - 301579693}
+\begin{document}
+\maketitle
+\onehalfspacing
+
+
+\section*{Question 1a}
+1. Find the determinant of A: $det(A - \lambda I)$ \\
+
+\begin{equation}
+    \begin{split}
+        det(A - \lambda I) &= det\left(\begin{bmatrix} a & b \\ c & d \\ \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\right) \\
+        &= det\left(\begin{bmatrix} a - \lambda & b \\ c & d - \lambda \end{bmatrix}\right) \\
+        &= (a - \lambda)(d - \lambda) - cb \\
+        &= ad - a\lambda - d\lambda + \lambda^2 - cb \\
+    \end{split}
+\end{equation}
+2. Let a = $1$, b = $-a - d$, c = $ad-bc$. Plug into quadratic formula:
+
+\begin{equation}
+    \begin{split}
+        \lambda_{1,2} &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+        &= \frac{-(-a - d) \pm \sqrt{(-a - d)^2 - 4(1)(ad - bc)}}{2} \\
+        &= \frac{a + d \pm \sqrt{(a + d)^2 - 4(ad - bc)}}{2} \\\\
+        \lambda_1 &= \frac{a + d + \sqrt{(a + d)^2 - 4(ad - bc)}}{2} \\
+        \lambda_2 &= \frac{a + d - \sqrt{(a + d)^2 - 4(ad - bc)}}{2} \\
+    \end{split}
+\end{equation}
+\newpage
+
+\text{Eigenvectors of } $A:$
+\begin{equation}
+\begin{split}
+(A - \lambda I)\begin{bmatrix}x \\ y\end{bmatrix} = 0 \\[6pt]
+\begin{bmatrix}
+a-\lambda & b \\
+c & d-\lambda
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\ 0
+\end{bmatrix}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+\lambda_{1,2}
+=
+\begin{bmatrix}
+b \\
+\lambda - a
+\end{bmatrix}
+\quad
+\end{split}
+\end{equation}
+
+
+\newpage
+\section*{Question 1b}
+Eigenvalues for Pauli matrices: \\
+\begin{equation}
+    \begin{split}
+        \sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, \sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \\\\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        det(\sigma_x - \lambda I) &= det\left(\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\right) \\
+        &= det\left(\begin{bmatrix} - \lambda & 1 \\ 1 & - \lambda \end{bmatrix}\right) \\
+        &= \lambda^2 - 1\\
+        \lambda_1 = 1, \lambda_2 = -1 \\
+        \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        det(\sigma_y - \lambda I) &= det\left(\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\right) \\
+        &= det\left(\begin{bmatrix} - \lambda & -i \\ i & - \lambda \end{bmatrix}\right) \\
+        &= \lambda^2 - 1 \\
+        \lambda_1 = 1, \lambda_2 = -1\\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        det(\sigma_z - \lambda I) &= det\left(\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\right) \\
+        &= det\left(\begin{bmatrix} 1 - \lambda & 0 \\ 0 & - 1 - \lambda \end{bmatrix}\right) \\
+        &= (1 - \lambda)(-1 - \lambda) \\
+        \lambda_1 = 1, \lambda_2 = -1
+    \end{split}
+\end{equation}
+
+\newpage
+\textbf{Eigenvectors for Pauli matrices:} \\\\
+\text{Eigenvectors of }$\sigma_z$:
+\begin{equation}
+\begin{split}
+\lambda = +1 &: \\
+(\sigma_z - I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 \\
+0 & -2
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\
+ y = 0 \\
+\ket{\uparrow}
+=
+\begin{bmatrix}
+1 \\ 0
+\end{bmatrix}
+\\[6pt]
+\lambda = -1 &: \\
+(\sigma_z + I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & 0 \\
+0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\
+x = 0 \\
+\ket{\downarrow}
+=
+\begin{bmatrix}
+0 \\ 1
+\end{bmatrix}
+\end{split}
+\end{equation}
+
+\text{Eigenvectors of } $\sigma_x$:
+\begin{equation}
+\begin{split}
+\lambda = +1 &: \\
+(\sigma_x - I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 & 1 \\
+1 & -1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\
+x = y \\
+\ket{+}
+=
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}
+\\[6pt]
+\lambda = -1 &: \\
+(\sigma_x + I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 1 \\
+1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\
+x = -y \\
+\ket{-}
+=
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 \\ -1
+\end{bmatrix}
+\end{split}
+\end{equation}
+
+
+\text{Eigenvectors of } $\sigma_y$:
+\begin{equation}
+\begin{split}
+\lambda = +1 &: \\
+(\sigma_y - I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 & -i \\
+i & -1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\
+y = i x \\
+= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 \\ i
+\end{bmatrix}
+\\[6pt]
+\lambda = -1 &: \\
+(\sigma_y + I)
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & -i \\
+i & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+= 0 \\y = -i x \\
+= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 \\ -i
+\end{bmatrix}
+\end{split}
+\end{equation}
+
+\newpage
+\section*{Question 2}
+
+Uncertainty: $\Delta\sigma^2 = \braket{\sigma^2} - \braket{\sigma}^2 $ \\
+We also know: $S_x = S_y = S_z = \frac{\hbar}{2}$ \\
+
+\begin{equation}
+    \begin{split}
+        \ket{\Psi} = \frac{3}{5}\ket{\uparrow} + \frac{4}{5}\ket{\downarrow} = \frac{3}{5}\begin{bmatrix} 1 \\ 0 \end{bmatrix} + \frac{4}{5}\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix} \\
+            \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+            \braket{S_x} &= \braket{\Psi|S_x|\Psi} \\
+            &= \frac{\hbar}{2}\begin{bmatrix} \frac{3}{5} & \frac{4}{5} \\ \end{bmatrix} \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix} \\
+            &= \frac{\hbar}{2}\left[\frac{3}{5}\cdot\frac{4}{5} + \frac{4}{5}\cdot\frac{3}{5}\right] = \frac{\hbar}{2}\cdot\frac{24}{25} = \frac{12\hbar}{50}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Delta S_x^2 &= \braket{S_x^2} - \braket{S_x}^2 \\
+        &= \sqrt{\frac{\hbar^2}{4} - \frac{144\hbar^2}{625}} \\
+        &= \frac{7}{50}\hbar \\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+            \braket{S_y} &= \braket{\Psi|S_y|\Psi} \\
+            &= \frac{\hbar}{2}\begin{bmatrix} \frac{3}{5} & \frac{4}{5} \\ \end{bmatrix} \begin{bmatrix} 0 & i \\ -i & 0 \end{bmatrix} \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix} \\
+            &= \frac{\hbar}{2}\left[\frac{3}{5}\cdot\frac{4i}{5} - \frac{4}{5}\cdot\frac{3i}{5}\right] = 0 \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Delta S_y^2 &= \braket{S_y^2} - \braket{S_y}^2 \\
+        &= \sqrt{\frac{\hbar^2}{4} - 0} \\
+        &= \frac{\hbar}{2} \\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+            \braket{S_z} &= \braket{\Psi|S_z|\Psi} \\
+            &= \frac{\hbar}{2}\begin{bmatrix} \frac{3}{5} & \frac{4}{5} \\ \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix} \\
+            &= \frac{\hbar}{2}\left[\frac{3}{5}\cdot\frac{3}{5} + \frac{4}{5}\cdot\frac{4}{5}\right] = \frac{\hbar}{2}\frac{-7}{25} = \frac{-7\hbar}{50}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Delta S_z^2 &= \braket{S_z^2} - \braket{S_z}^2 \\
+        &= \sqrt{\frac{\hbar^2}{4} - \frac{49\hbar^2}{2500}} \\
+        &= \frac{24}{50}\hbar \\
+        &= \frac{12}{25}\hbar \\
+    \end{split}
+\end{equation}
+
+\newpage
+\section*{Question 3a}
+
+\begin{equation}
+    \begin{split}
+        \ket{\Psi(t)} &= e^{-iHt/\hbar}\ket{\Psi(0)} = e^{-iHt\hbar}\ket{\uparrow} \\
+        &= e^{-iE_0t/\hbar}\ket{\uparrow} \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        P_\uparrow &= \left|\braket{\uparrow|\Psi(t)}\right|^2 \\
+        &= \left| \bra{\uparrow} \left(e^{-iE_0t/\hbar}\ket{\uparrow}\right) \right|^2 \\
+        &= \left|e^{-iE_0t/\hbar}\right|^2 \\
+        &= 1 \\
+\end{split}
+\end{equation}
+\text{Global phase factor does not effect probability, so probability is 1} 
+
+\section*{Question 3b}
+
+\begin{equation}
+    \begin{split}
+        \ket{\Psi(t)} &= e^{-iHt/\hbar}\ket{\Psi(0)} \\
+        &= e^{-iHt\hbar}\left[ cos(\frac{\theta}{2})\ket{\uparrow} + e^{i\phi}sin(\frac{\theta}{2})\ket{\downarrow}\right] \\
+        &= e^{-iE_0t/\hbar}cos(\frac{\theta}{2})\ket{\uparrow} + e^{-iE_1t/\hbar} e^{i\phi}sin(\frac{\theta}{2})\ket{\downarrow} \\
+        &=  e^{-iE_0t/\hbar}\left[cos(\frac{\theta}{2})\ket{\uparrow}+ e^{i(\phi - \frac{(E_1 - E_0)t}{\hbar})}sin(\frac{\theta}{2})\ket{\downarrow}\right]
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_\uparrow &= \left|\braket{\uparrow|\Psi(t)}\right|^2 \\
+        &= \left| \bra{\uparrow}\left[ e^{-iE_0t/\hbar}cos(\frac{\theta}{2})\ket{\uparrow} + e^{-iE_1t/\hbar} e^{i\phi}sin(\frac{\theta}{2})\ket{\downarrow}\right]\right|^2 \\
+        &= \left|cos(\frac{\theta}{2})\right|^2 \\
+        &= cos^2(\frac{\theta}{2}) \\
+\end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_+ &= \left|\braket{+|\Psi(t)}\right|^2 \\
+        &= \left| \left[ \frac{1}{\sqrt{2}}\bra{\uparrow} + \frac{1}{\sqrt{2}}\bra{\downarrow}\right] \left[ e^{-iE_0t/\hbar}cos(\frac{\theta}{2})\ket{\uparrow} + e^{-iE_1t/\hbar} e^{i\phi}sin(\frac{\theta}{2})\ket{\downarrow}\right]\right|^2 \\
+        &= \left|e^{-iE_0t/\hbar}\left[\frac{1}{\sqrt{2}}cos(\frac{\theta}{2}) + \frac{1}{\sqrt{2}}e^{i(\phi - \frac{(E_1 - E_0)t}{\hbar})}sin(\frac{\theta}{2})\right]\right|^2 \\
+        &= \frac{1}{2}\left| \cos\left(\frac{\theta}{2}\right) + e^{i(\phi - \frac{(E_1 - E_0)t}{\hbar})} \sin\left(\frac{\theta}{2}\right) \right|^2 \\
+        &= \frac{1}{2} \left[ \cos^2\left(\frac{\theta}{2}\right)  + \sin^2\left(\frac{\theta}{2}\right) + 2\cos\left(\frac{\theta}{2}\right) \sin\left(\frac{\theta}{2}\right) \cos\left(\phi - \frac{(E_1 - E_0)t}{\hbar}\right) \right] \\\\
+        &= \frac{1}{2} \left[ 1 + \sin\theta \cos\left(\phi - \frac{(E_1 - E_0)t}{\hbar}\right) \right] \\
+    \end{split}
+\end{equation}
+
+\end{document}

@@ -1,0 +1,277 @@
+\documentclass[12pt]{article}
+\usepackage[
+    ignoreheadfoot,
+    top = 1.0 cm,
+    right = 1.5 cm,
+    left = 1.5 cm,
+    bottom = 2.0 cm,
+    footskip = 1.0 cm,
+]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage{setspace}
+\title{PHYS 285 - HW2}
+\author{Kirstin Horvat \\ \small{301579693}}
+\begin{document}
+\maketitle
+\onehalfspacing
+
+
+\section*{Question 1a}
+\textbf{Probabilities in z-direction (up and down):} \\
+Possible outcomes: either in positive or negative z-direction
+\begin{equation}
+    \begin{split}
+        P_{+z} &= |\braket{ \uparrow | \Psi}|^{2} \\
+        &= \left| \frac{1}{\sqrt{13}}(3\braket{\uparrow | \uparrow} + 2j\braket{\uparrow | \downarrow})\right|^2 \\
+        &= \frac{1}{13}\left|(3\braket{\uparrow | \uparrow} + 2j\braket{\uparrow | \downarrow})^{2}\right| \\
+        &= \frac{1}{13}\left|(3 + 0)^{2}\right| \\
+        &= \frac{1}{13}\left(\sqrt{9 + 0}\right)^{2} = \frac{9}{13} \approx 69.23\% \\
+    \end{split}
+\end{equation}
+
+
+\begin{equation}
+    \begin{split}
+        P_{-z} &= |\braket{ \downarrow | \Psi}|^{2} \\
+        &= \left|\frac{1}{\sqrt{13}}(3\braket{\downarrow | \uparrow} - 2j\braket{\downarrow | \downarrow})\right|^2 \\
+        &= \frac{1}{13}\left|(3\braket{\downarrow | \uparrow} - 2j\braket{\downarrow | \downarrow})^{2}\right| \\ 
+        &= \frac{1}{13}\left|(0 - 2j)^{2}\right| \\ 
+        &= \frac{1}{13}\left(\sqrt{0 + 4}\right)^{2} = \frac{4}{13} \approx 30.77\% \\
+    \end{split}
+\end{equation}
+\[
+\text{Or: } P_{-z} = 100 - 69.23 = 30.77\%
+\]
+
+\newpage
+
+\raggedright
+\textbf{Probabilities in the x-direction (left and right):} \\
+Possible Outcomes: Since the original state is either in the positive z or negative z direction initially, a measurement in a different axes mixes the state. The probability of entering through the positive or negative x direction will be equal.
+
+\begin{equation}
+    \begin{split}
+        P_{+x} &= \left|\braket{ \rightarrow | \Psi}\right|^{2} \\
+        &= \frac{1}{13}\left|\left(3\braket{\rightarrow | \uparrow} + 2i\braket{\rightarrow | \downarrow}\right)^{2}\right| \\
+        &= \frac{1}{13}\left|\left(3\left(\frac{1}{\sqrt{2}}\bra{\uparrow} + \frac{1}{\sqrt{2}}\bra{\downarrow}\right)\ket{\uparrow} + 2i\left(\frac{1}{\sqrt{2}}\bra{\uparrow} + \frac{1}{\sqrt{2}}\bra{\downarrow}\right)\ket{\downarrow}\right)\right|^2 \\
+        &= \frac{1}{13}\left|\left(\frac{3}{\sqrt{2}} + \frac{2i}{\sqrt{2}}\right)^2\right| \\
+        &= \frac{1}{26}\left|\left(3 + 2i\right)^2\right| \\
+        &= \frac{1}{26}(\sqrt{9 + 4})^2  = \frac{\sqrt{169}}{26} = \frac{13}{26} = 50\% \\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_{-x} &= \left|\braket{ \leftarrow | \Psi}\right|^{2} \\
+        &= \frac{1}{13}\left|\left(3\braket{\leftarrow | \uparrow} + 2i\braket{\leftarrow | \downarrow}\right)^{2}\right| \\
+        &= \frac{1}{13}\left|\left(3\left(\frac{1}{\sqrt{2}}\bra{\uparrow} - \frac{1}{\sqrt{2}}\bra{\downarrow}\right)\ket{\uparrow} + 2i\left(\frac{1}{\sqrt{2}}\bra{\uparrow} - \frac{1}{\sqrt{2}}\bra{\downarrow}\right)\ket{\downarrow}\right)\right|^2 \\
+        &= \frac{1}{13}\left|\left(\frac{3}{\sqrt{2}} - \frac{2i}{\sqrt{2}}\right)^2\right| \\
+        &= \frac{1}{26}\left|\left(3 - 2i\right)^2\right| \\
+        &= \frac{1}{26}(\sqrt{9 + 4})^2 = \frac{13}{26} = 50\% \\
+    \end{split}
+\end{equation}
+
+
+\newpage
+\section*{Question 1b}
+
+\textbf{Given state:}
+\[
+\ket{\Psi}=\frac{3}{\sqrt{13}}\ket{\uparrow} + \frac{2i}{\sqrt{13}}\ket{\downarrow}
+\]
+
+\textbf{Probabilities in z-direction (up and down):} \\
+Possible outcomes: either in positive or negative z-direction
+
+\begin{equation}
+    \begin{split}
+        P_{+z} &= |\braket{ \uparrow | \Psi}|^{2} \\
+        &= \left|\frac{3}{\sqrt{13}}\right|^2 \\
+        &= \frac{9}{13} \approx 69.23\% \\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_{-z} &= |\braket{ \downarrow | \Psi}|^{2} \\
+        &= \left|\frac{2i}{\sqrt{13}}\right|^2 \\
+        &= \frac{4}{13} \approx 30.77\% \\
+    \end{split}
+\end{equation}
+
+
+\raggedright
+\textbf{Probabilities in the x-direction (left and right):} \\
+Possible outcomes: measurement along a different axis mixes the state.
+
+\[
+\ket{\rightarrow}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}+\ket{\downarrow}\right),
+\qquad
+\ket{\leftarrow}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}-\ket{\downarrow}\right)
+\]
+
+\begin{equation}
+    \begin{split}
+        P_{+x} &= \left|\braket{ \rightarrow | \Psi}\right|^{2} \\
+        &= \left|\frac{1}{\sqrt{2}}\left(\bra{\uparrow}+\bra{\downarrow}\right)
+        \left(\frac{3}{\sqrt{13}}\ket{\uparrow}+\frac{2i}{\sqrt{13}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\frac{1}{\sqrt{26}}\left(3 + 2i\right)\right|^2 \\
+        &= \frac{1}{26}\left|3+2i\right|^2 \\
+        &= \frac{1}{26}(9+4) = \frac{13}{26} = 50\% \\
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        P_{-x} &= \left|\braket{ \leftarrow | \Psi}\right|^{2} \\
+        &= \left|\frac{1}{\sqrt{2}}\left(\bra{\uparrow}-\bra{\downarrow}\right)
+        \left(\frac{3}{\sqrt{13}}\ket{\uparrow}+\frac{2i}{\sqrt{13}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\frac{1}{\sqrt{26}}\left(3 - 2i\right)\right|^2 \\
+        &= \frac{1}{26}\left|3-2i\right|^2 \\
+        &= \frac{13}{26} = 50\% \\
+    \end{split}
+\end{equation}
+
+
+
+\newpage
+\section*{Question 2}
+We first know:
+\begin{equation}
+    \ket{-}_{y} = \frac{1}{\sqrt2}\ket{\uparrow} + \frac{1}{\sqrt2}\ket{\downarrow}
+\end{equation}
+\begin{equation}
+    \ket{+}_{y} = \frac{1}{\sqrt2}\ket{\uparrow} - \frac{1}{\sqrt2}\ket{\downarrow}    
+\end{equation}
+\begin{equation}
+    P_{-y} = |\braket{-|\Psi}|^2    
+\end{equation}
+\begin{equation}
+    P_{+y} = |\braket{+|\Psi}|^2 
+\end{equation} \\
+
+1. Solve for the expectation value using an arbituary vector $\Psi$ :
+\begin{equation}
+    \begin{split}
+        \braket{S_y} &= P_{+y}\left(\frac{\hbar}{2}\right)  + P_{-y}\left(-\frac{\hbar}{2}\right) \\
+        &= \frac{\hbar}{2}\left( |\braket{+|\Psi}|^2 - |\braket{-|\Psi}|^2\right) \\
+        &= \frac{\hbar}{2}\left( \braket{\Psi|+}\braket{+|\Psi} - \braket{\Psi|-}\braket{-|\Psi}\right) \\
+        &= \bra{\Psi}\left(\frac{\hbar}{2}\ket{+}\bra{+} - \frac{\hbar}{2}\ket{-}\bra{-}\right)\ket{\Psi} \\
+    \end{split}
+\end{equation}
+
+2. Define each ket-bra vectors in terms of their basis (z-direction)
+\begin{equation}
+    \begin{split}
+        \ket{-}\bra{-} &= \left(\frac{1}{\sqrt{2}}\bra{\uparrow} - \frac{i}{\sqrt{2}}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} - \frac{i}{\sqrt{2}}\ket{\downarrow}\right) \\
+        &= \frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix} - \begin{bmatrix} 0 \\ i \end{bmatrix}\right)\left(\begin{bmatrix} 1 & 0 \end{bmatrix} + \begin{bmatrix} 0 & i \end{bmatrix}\right) \\
+        &= \frac{1}{2}\begin{bmatrix} 1 \\ -i \end{bmatrix}\begin{bmatrix} 1 & i \end{bmatrix} \\
+        &= \frac{1}{2}\begin{bmatrix} 1 & i \\ -i & -i^2 \end{bmatrix} \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \ket{+}\bra{+} &= \left(\frac{1}{\sqrt{2}}\bra{\uparrow} + \frac{i}{\sqrt{2}}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} + \frac{i}{\sqrt{2}}\ket{\downarrow}\right) \\
+        &= \frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ i \end{bmatrix}\right)\left(\begin{bmatrix} 1 & 0 \end{bmatrix} - \begin{bmatrix} 0 & i \end{bmatrix}\right) \\
+        &= \frac{1}{2}\begin{bmatrix} 1 \\ i \end{bmatrix}\begin{bmatrix} 1 & -i \end{bmatrix} \\
+        &= \frac{1}{2}\begin{bmatrix} 1 & -i \\ i & -i^2 \end{bmatrix} \\
+    \end{split}
+\end{equation}
+3. Plug each matrix back into the expectation value equation (1)
+\begin{equation}
+    \begin{split}
+        \braket{S_y} &= \frac{\hbar}{2}\left(\frac{1}{2}\begin{bmatrix} 1 & -i \\ i & -i^2 \end{bmatrix} - \frac{1}{2}\begin{bmatrix} 1 & i \\ -i & -i^2 \end{bmatrix}\right) \\
+        &= \frac{1}{2}\frac{\hbar}{2}\begin{bmatrix} 0 & -2i \\ 2i & 0 \end{bmatrix} \\
+        &= \frac{\hbar}{2}\begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \\
+    \end{split}
+\end{equation}
+
+\newpage
+
+\section*{Question 3}
+
+\textbf{Expectation values in x-direction:} \\
+
+\[
+ \braket{S_x} = P_{+x}\left(\frac{\hbar}{2}\right) + P_{-x}\left(-\frac{\hbar}{2}\right)
+\]
+\begin{equation}
+    \begin{split}
+        P_{+x} &= \left|\braket{+|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} + \frac{1}{\sqrt{2}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\left( \frac{3}{5\sqrt{2}} + \frac{4}{5\sqrt{2}}\right)\right|^2 \\
+        &= \frac{1}{2(25)}\left| 7 \right|^2 = \frac{49}{50} \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        P_{-x} &= \left|\braket{-|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} - \frac{1}{\sqrt{2}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\left( \frac{3}{5\sqrt{2}} - \frac{4}{5\sqrt{2}}\right)\right|^2 \\
+        &= \frac{1}{2(25)}\left|-1\right|^2 = \frac{1}{50} \\
+    \end{split}
+\end{equation}\\ 
+\begin{equation}
+    \begin{split}
+        \braket{S_x} &= \frac{\hbar}{2}\left(\frac{49}{50}\right) - \frac{\hbar}{2}\left(\frac{1}{50}\right) = \frac{48}{50}\hbar \text{\qquad \rightarrowfill \qquad Most likely going in the positive x-direction}\\\\
+    \end{split}
+\end{equation}
+
+\textbf{Expectation values in y-direction:} \\
+\[
+    \braket{S_y} = P_{+y}\left(\frac{\hbar}{2}\right) + P_{-y}\left(-\frac{\hbar}{2}\right)
+\]
+\begin{equation}
+    \begin{split}
+        P_{+y} &= \left|\braket{+|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} + \frac{i}{\sqrt{2}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\left( \frac{3}{5\sqrt{2}} + \frac{4i}{5\sqrt{2}}\right)\right|^2 \\
+        &= \frac{1}{2(25)}\left| 3 + 4i \right|^2 = \frac{1}{50}\left(\sqrt{9 + 16}\right)^2 = \frac{25}{50} = \frac{1}{2} \\
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        P_{-y} &= \left|\braket{-|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\left(\frac{1}{\sqrt{2}}\ket{\uparrow} - \frac{i}{\sqrt{2}}\ket{\downarrow}\right)\right|^2 \\
+        &= \left|\left( \frac{3}{5\sqrt{2}} - \frac{4i}{5\sqrt{2}}\right)\right|^2 \\
+        &= \frac{1}{2(25)}\left|3 - 4i\right|^2 = \frac{1}{50}\left(\sqrt{9 + 16}\right)^2 = \frac{25}{50} = \frac{1}{2}\\ 
+    \end{split}
+\end{equation} \\
+\begin{equation}
+    \begin{split}
+        \braket{S_y} &= \frac{\hbar}{2}\left(\frac{1}{2}\right) - \frac{\hbar}{2}\left(\frac{1}{2}\right) = 0 \text{\qquad \rightarrowfill \qquad Could go in either positive or negative y-direction; } \\\\
+    \end{split}
+\end{equation}
+
+\textbf{Expectation values in z-direction:} \\
+\[
+ \braket{S_z} = P_{\uparrow}\left(\frac{\hbar}{2}\right) + P_{\downarrow}\left(-\frac{\hbar}{2}\right)
+\]
+\begin{equation}
+    \begin{split}
+        P_{\uparrow} &= \left|\braket{\uparrow|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\ket{\uparrow}\right|^2 \\
+        &= \left|\frac{3}{5}\right|^2 = \frac{9}{25}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        P_{\uparrow} &= \left|\braket{\uparrow|\Psi}\right|^2 \\
+        &= \left|\left(\frac{3}{5}\bra{\uparrow} + \frac{4}{5}\bra{\downarrow}\right)\ket{\downarrow}\right|^2 \\
+        &= \left|\frac{4}{5}\right|^2 = \frac{16 }{25}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \braket{S_z} &= \frac{\hbar}{2}\left(\frac{9}{25}\right) - \frac{\hbar}{2}\left(\frac{16}{25}\right) = -\frac{7}{50}\hbar \text{\qquad \rightarrowfill \qquad Most likely going in the negative z-direction}
+    \end{split}
+\end{equation}
+
+
+
+
+
+
+\end{document}
