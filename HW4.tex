@@ -1,0 +1,338 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{braket}
+\title{Homework 4}
+\author{Kirstin Horvat - 301579693}
+\begin{document}
+\maketitle
+
+\section*{Question 1a}
+Let \(A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\) and \(B = \begin{bmatrix} e & f \\ g & h \end{bmatrix}\) \\
+\begin{paragraph}
+The hermitian operator is the complex conjugate transpose of a matrix. An example below shows what happens when the complex conjugate and transpose is applied to a matrix.
+\end{paragraph}
+
+\begin{align*}
+\begin{split}
+    A^* &= \begin{bmatrix} a^* & b^* \\ c^* & d^* \end{bmatrix} A^T = \begin{bmatrix} a & c \\ b & d \end{bmatrix} \\\\
+\end{split}
+\end{align*}
+
+\begin{align*}
+    \begin{split}
+        A^{\dagger} &= \begin{bmatrix} a^* & c^* \\ b^* & d^* \end{bmatrix} \\ 
+        B^{\dagger} &= \begin{bmatrix} e^* & g^* \\ f^* & h^* \end{bmatrix} \\\\
+    \end{split}
+\end{align*}
+
+\begin{align*}
+\begin{split}
+    B^{\dagger}A^{\dagger} &= \begin{bmatrix} e^* & g^* \\ f^* & h^* \end{bmatrix}\begin{bmatrix} a^* & c^* \\ b^* & d^* \end{bmatrix} \\
+    &= \begin{bmatrix} e^* a^* + g^* b^* & e^* c^* + g^* d^* \\ f^* a^* + h^* b^* & f^* c^* + h^* d^* \end{bmatrix} \\
+    &= \begin{bmatrix} (ea + gb)^* & (ec + gd)^* \\ (fa + hb)^* & (fc + hd)^* \end{bmatrix} \\\\
+\end{split}
+\end{align*}
+
+
+\begin{align*}
+\begin{split}
+   (AB) &= \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} e & f \\ g & h \end{bmatrix} \\
+   &= \begin{bmatrix} ae + bg & af + bh \\ ce + dg & cf + dh \end{bmatrix} \\
+   (AB)^{\dagger} &= \begin{bmatrix} (ae + bg)^* & (ce + dg)^* \\ (af + bh)^* & (cf + dh)^* \end{bmatrix} \\
+\end{split}
+\end{align*}
+
+\begin{align*}
+    \begin{split}
+        (AB)^{\dagger} = B^{\dagger}A^{\dagger} = \begin{bmatrix} (ae + bg)^* & (ce + dg)^* \\ (af + bh)^* & (cf + dh)^* \end{bmatrix} = \begin{bmatrix} (ea + gb)^* & (ec + gd)^* \\ (fa + hb)^* & (fc + hd)^* \end{bmatrix} \\\\
+    \end{split}
+\end{align*}
+
+\section*{Question 1b}
+\begin{align*}
+    \begin{split}
+        [A, B] &= AB - BA \\
+        &= 
+        \begin{bmatrix}
+            a & b \\ c & d
+        \end{bmatrix}
+        \begin{bmatrix}
+            e & f \\ g & h
+        \end{bmatrix} -
+        \begin{bmatrix}
+            e & f \\ g & h
+        \end{bmatrix}
+        \begin{bmatrix}
+            a & b \\ c & d
+        \end{bmatrix} \\
+        &= 
+        \begin{bmatrix} 
+            ae + bg & af + bh \\ 
+            ce + dg & cf + dh 
+        \end{bmatrix} - 
+        \begin{bmatrix} 
+            ea + fc & eb + fd \\ 
+            ga + gc & gb + hd 
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+            ae + bg - ea - fc & af + bh - eb - fd \\
+            ce + dg - ga - gc & cf + dh - gb - hd
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+            bg - fc & af + bh - eb - fd \\
+            ce + dg - ga - gc & cf - gb
+        \end{bmatrix} \\
+        [A, B]^{\dagger}
+        &=    
+        \begin{bmatrix} 
+            (bg - fc)^* &  (ce + dg - ga - gc)^* \\
+            (af + bh - eb - fd)^* & (cf - gb)^*
+        \end{bmatrix} \\\\
+    \end{split}
+\end{align*}
+
+\begin{align*}
+\begin{split}
+    [B^{\dagger}, A^{\dagger}] &= B^{\dagger}A^{\dagger} - A^{\dagger}B^{\dagger} \\
+    &= 
+    \begin{bmatrix}
+        e^* & g^* \\ f^* & h^* \\
+    \end{bmatrix}
+    \begin{bmatrix}
+        a^* & c^* \\ b^* & d^* \\
+    \end{bmatrix}
+    - \begin{bmatrix}
+        a^* & c^* \\ b^* & d^* \\   
+    \end{bmatrix}
+    \begin{bmatrix}
+        e^* & g^* \\ f^* & h^* \\
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+        e^* a^* + g^* b^* & e^* c^* + g^* d^* \\
+        f^* a^* + h^* b^* & f^* c^* + h^* d^*
+    \end{bmatrix}
+    - \begin{bmatrix}
+        a^* e^* + c^* f^* & a^* g^* + c^* h^* \\
+        b^* e^* + d^* f^* & b^* g^* + d^* h^*
+    \end{bmatrix} \\
+    &=
+    \begin{bmatrix}
+       g^* b^* - c^* f^* & e^* c^* + g^* d^* -a^* g^* - c^* h^* \\
+        f^* a^* + h^* b^* - b^* e^* - d^* f^* & f^* c^* - b^* g^* 
+    \end{bmatrix} \\
+    &= 
+    \begin{bmatrix}
+        (gb - cf)^* & (ec + gd - ag - ch)^* \\
+        (fa + hb - be - df)^* & (fc - bg)^*
+    \end{bmatrix} \\
+\end{split}
+\end{align*}
+
+\begin{align*}
+    \begin{split}
+        [A, B]^{\dagger} &= [B^{\dagger}, A^{\dagger}] \\
+        &= \begin{bmatrix} 
+            (bg - fc)^* &  (ce + dg - ga - gc)^* \\
+            (af + bh - eb - fd)^* & (cf - gb)^*
+        \end{bmatrix} = \begin{bmatrix}
+            (gb - cf)^* & (ec + gd - ag - ch)^* \\
+            (fa + hb - be - df)^* & (fc - bg)^*
+        \end{bmatrix} \\
+    \end{split}
+\end{align*}
+
+\section*{Question 1c}
+\text{Pauli matrices:}
+\begin{align*}
+    \begin{split}
+        \sigma_x =
+        \begin{bmatrix}
+            0 & 1 \\
+            1 & 0 \\
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+\begin{align*}
+    \begin{split}
+        \sigma_y =
+        \begin{bmatrix}
+            0 & -i \\
+            i & 0 \\
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+\begin{align*}
+    \begin{split}
+        \sigma_z =
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & -1 \\
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+
+\begin{paragraph}
+    Since the pauli matrices are antisymmetric where $[\sigma_x, \sigma_y] = -[\sigma_y, \sigma_x]$, there are only 3 commutators
+\end{paragraph}
+
+\begin{align*}
+    \begin{split}
+    [\sigma_x, \sigma_y] &=
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & -i \\
+        i & 0
+    \end{bmatrix}
+    - \begin{bmatrix}
+        0 & -i \\
+        i & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix} \\
+    &= 
+    \begin{bmatrix}
+        i & 0 \\
+        0 & -i
+    \end{bmatrix}
+    - \begin{bmatrix}
+        -i & 0 \\
+        0 & i
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        i + i & 0 \\
+        0 & -i - i
+    \end{bmatrix} \\
+    &= 2i \begin{bmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{bmatrix} \\
+    &= 2i\sigma_z \\
+    \end{split}
+\end{align*}
+
+\begin{align*}
+    \begin{split}
+    [\sigma_z, \sigma_y] &=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & -i \\
+        i & 0
+    \end{bmatrix}
+    - \begin{bmatrix}
+        0 & -i \\
+        i & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{bmatrix} \\
+    &= 
+    \begin{bmatrix}
+        0 & -i \\
+        -i & 0
+    \end{bmatrix}
+    - \begin{bmatrix}
+        0 & i \\
+        i & 0
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        0 & -i - i \\
+        -i - i & 0
+    \end{bmatrix} \\
+    &= -2i \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix} \\
+    &= -2i\sigma_x \\
+    [\sigma_y, \sigma_z] &= -[\sigma_z, \sigma_y] = 2i\sigma_x \\
+    \end{split}
+\end{align*}
+
+
+\text{Note: $i * i = -1$}
+\begin{align*}
+    \begin{split}
+    [\sigma_z, \sigma_x] &=
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}
+    - \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & -1
+    \end{bmatrix} \\
+    &= 
+    \begin{bmatrix}
+        0 & 1 \\
+        -1 & 0
+    \end{bmatrix}
+    - \begin{bmatrix}
+        0 & -1\\
+        1 & 0
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        0 & 1 + 1 \\
+        -1 - 1 & 0
+    \end{bmatrix} \\
+    &= 2i \begin{bmatrix}
+        0 & 1 \\
+        -1 & 0
+    \end{bmatrix} \\
+    &= 2i \begin{bmatrix}
+        0 & -i \\   
+        i & 0
+    \end{bmatrix} \\
+    &= 2i\sigma_y \\
+    \end{split}
+\end{align*}
+
+\section*{Question 2a}
+\begin{paragraph}
+    Using an example of a projection into the positive x direction\mathsf{}
+\end{paragraph}
+\begin{align*}
+    \begin{split}
+        \hat{P}_+ &= \ket{+}\bra{+} \\
+        &= \begin{bmatrix} 1 \\ 0 \end{bmatrix}  \begin{bmatrix} 1 & 0 \end{bmatrix} \\
+        &= \begin{bmatrix} 
+            1 & 0 \\ 
+            0 & 0
+        \end{bmatrix} \\
+        det(\hat{P}_+ - \lambda I) &= \begin{bmatrix}
+            1 - \lambda & 0 \\
+            0 & -\lambda
+        \end{bmatrix} \\
+        &= -\lambda (1 - \lambda) \\
+        \lambda_1 = 0, \lambda_2 = 1
+    \end{split}
+\end{align*}
+\begin{align*}
+    \begin{split}
+        P_\uparrow =    
+    \end{split}
+\end{align*}
+\section*{Question 2b}
+
+
+\end{document}
+
