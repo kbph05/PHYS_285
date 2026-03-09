@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{braket}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
 \title{Homework 4}
 \author{Kirstin Horvat - 301579693}
 \begin{document}
@@ -306,9 +307,11 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
     \end{split}
 \end{align*}
 
+\newpage
+
 \section*{Question 2a}
 \begin{paragraph}
-    Using an example of a projection into the positive x direction\mathsf{}
+    Using an example of a projection into the positive x direction
 \end{paragraph}
 \begin{align*}
     \begin{split}
@@ -326,12 +329,72 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
         \lambda_1 = 0, \lambda_2 = 1
     \end{split}
 \end{align*}
+\section*{Question 2b}
+Eigenvalues for the projection operator for the spin up state
 \begin{align*}
     \begin{split}
-        P_\uparrow =    
+        P_\uparrow &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \\
+        det(P_\uparrow - \lambda I) &= \begin{bmatrix} 1 - \lambda & 0 \\ 0 & -\lambda \end{bmatrix} \\
+        &= -\lambda (1 - \lambda) \\
+        \lambda_1 &= 0 \\
+        \lambda_2 &= 1 \\
     \end{split}
 \end{align*}
-\section*{Question 2b}
+Eigenstates (eigenvectors) for the projection operator for the spin up state
+\begin{align*}
+    \begin{split}
+        \lambda = 1: \\
+        &= \begin{bmatrix}
+            1 - 1  & 0 \\
+            0 & -1
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+            0 & 0 \\
+            0 & -1
+        \end{bmatrix} \\\\
+        \lambda = 0: \\
+        &= \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix} \\\\
+    \end{split}
+\end{align*}
+Eigenvalues of the projection operator for the spin down state
+\begin{align*}
+    \begin{split}
+        P_\downarrow &= \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \\
+        det(P_\downarrow - \lambda I) &= \begin{bmatrix} -\lambda & 0 \\ 0 & 1 - \lambda \end{bmatrix} \\
+        &= -\lambda (1 - \lambda) \\
+        \lambda_1 &= 0 \\
+        \lambda_2 &= 1 \\
+    \end{split}
+\end{align*}
+Eigenstates (eigenvectors) for the projection operator for the spin down state
+\begin{align*}
+    \begin{split}
+        \lambda = 1: \\
+        &= \begin{bmatrix}
+            -1 & 0 \\
+            0 & 1 - 1
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+            -1 & 0 \\
+            0 & 0
+        \end{bmatrix} \\\\
+        \lambda = 0: \\
+        &= \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix} \\\\
+    \end{split}
+\end{align*}
+
+\section*{Question 2c}
+
+\begin{align*}
+    \begin{split}
+    \end{split}
+\end{align*}
 
 
 \end{document}
