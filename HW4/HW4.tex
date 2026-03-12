@@ -12,9 +12,9 @@
 
 \section*{Question 1a}
 Let \(A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\) and \(B = \begin{bmatrix} e & f \\ g & h \end{bmatrix}\) \\
-\begin{paragraph}
-The hermitian operator is the complex conjugate transpose of a matrix. An example below shows what happens when the complex conjugate and transpose is applied to a matrix.
-\end{paragraph}
+\paragraph[short]{} {
+    The hermitian operator is the complex conjugate transpose of a matrix. An example below shows what happens when the complex conjugate and transpose is applied to a matrix.
+}
 
 \begin{align*}
 \begin{split}
@@ -129,17 +129,17 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
     \begin{bmatrix}
         (gb - cf)^* & (ec + gd - ag - ch)^* \\
         (fa + hb - be - df)^* & (fc - bg)^*
-    \end{bmatrix} \\
+    \end{bmatrix} \\\\
 \end{split}
 \end{align*}
 
 \begin{align*}
     \begin{split}
         [A, B]^{\dagger} &= [B^{\dagger}, A^{\dagger}] \\
-        &= \begin{bmatrix} 
+        \begin{bmatrix} 
             (bg - fc)^* &  (ce + dg - ga - gc)^* \\
             (af + bh - eb - fd)^* & (cf - gb)^*
-        \end{bmatrix} = \begin{bmatrix}
+        \end{bmatrix} &= \begin{bmatrix}
             (gb - cf)^* & (ec + gd - ag - ch)^* \\
             (fa + hb - be - df)^* & (fc - bg)^*
         \end{bmatrix} \\
@@ -176,9 +176,9 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
     \end{split}
 \end{align*}
 
-\begin{paragraph}
+\paragraph[short]{} {
     Since the pauli matrices are antisymmetric where $[\sigma_x, \sigma_y] = -[\sigma_y, \sigma_x]$, there are only 3 commutators
-\end{paragraph}
+}
 
 \begin{align*}
     \begin{split}
@@ -310,9 +310,9 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
 \newpage
 
 \section*{Question 2a}
-\begin{paragraph}
-    Using an example of a projection into the positive x direction
-\end{paragraph}
+\paragraph[short]{} {
+    Using an example of a projection into the positive x direction. The eigenvalues are either 0 or 1 because the state can either be in the positive x direction or not.
+}
 \begin{align*}
     \begin{split}
         \hat{P}_+ &= \ket{+}\bra{+} \\
@@ -330,7 +330,8 @@ The hermitian operator is the complex conjugate transpose of a matrix. An exampl
     \end{split}
 \end{align*}
 \section*{Question 2b}
-Eigenvalues for the projection operator for the spin up state
+\textbf{Spin up}\\\\
+Eigenvalues:
 \begin{align*}
     \begin{split}
         P_\uparrow &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \\
@@ -340,26 +341,78 @@ Eigenvalues for the projection operator for the spin up state
         \lambda_2 &= 1 \\
     \end{split}
 \end{align*}
-Eigenstates (eigenvectors) for the projection operator for the spin up state
+Eigenstates (eigenvectors):
 \begin{align*}
     \begin{split}
         \lambda = 1: \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
             1 - 1  & 0 \\
             0 & -1
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
         \end{bmatrix} \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
             0 & 0 \\
             0 & -1
-        \end{bmatrix} \\\\
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
+            0 \\
+            -v_2
+        \end{bmatrix} 
+        = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\\\
+        v_2 = 0 \text{ and } v_1 \text{ is free so the eigenstate is } \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \ket{0} \\\\\\
         \lambda = 0: \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
+            1 - 0  & 0 \\
+            0 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
             1 & 0 \\
             0 & 0
+        \end{bmatrix} 
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
+            v_1 \\
+            0
+        \end{bmatrix} 
+        = \begin{bmatrix} 
+            0 \\ 
+            0 
         \end{bmatrix} \\\\
+        v_1 = 0 \text{ and } v_2 \text{ is free so the eigenstate is } \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \ket{1} \\\\
     \end{split}
 \end{align*}
-Eigenvalues of the projection operator for the spin down state
+\textbf{Spin down}\\\\
+Eigenvalues:
 \begin{align*}
     \begin{split}
         P_\downarrow &= \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \\
@@ -369,30 +422,297 @@ Eigenvalues of the projection operator for the spin down state
         \lambda_2 &= 1 \\
     \end{split}
 \end{align*}
-Eigenstates (eigenvectors) for the projection operator for the spin down state
+Eigenstates (eigenvectors):
 \begin{align*}
     \begin{split}
         \lambda = 1: \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
             -1 & 0 \\
             0 & 1 - 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
         \end{bmatrix} \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
             -1 & 0 \\
             0 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
+            -v_1 \\
+            0
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 \\
+            0
         \end{bmatrix} \\\\
+        v_1 = 0 \text{ and } v_2 \text{ is free so the eigenstate is } \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \ket{1} \\\\\\
         \lambda = 0: \\
-        &= \begin{bmatrix}
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1 - 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
             0 & 0 \\
             0 & 1
+        \end{bmatrix}
+        \begin{bmatrix} 
+            v_1 \\
+            v_2
+        \end{bmatrix} =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \begin{bmatrix}
+            0 \\
+            v_2
+        \end{bmatrix}
+        = \begin{bmatrix}
+            0 \\
+            0
         \end{bmatrix} \\\\
+        v_2 = 0 \text{ and } v_1 \text{ is free so the eigenstate is } \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \ket{0} \\
     \end{split}
 \end{align*}
 
 \section*{Question 2c}
+\paragraph[short]{} {
+    Projecting a spin up state onto a spin up state in a Stern Gerlach experiment does not change the state from a spin up state since it is already in a spin up state
+}
+\begin{align*}
+    \begin{split}
+        P_\uparrow^2 = P_\uparrow P_\uparrow &=
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix} \\
+        &= 
+        \begin{bmatrix}
+            1 + 0 & 0 + 0 \\
+            0 + 0 & 0 + 0
+        \end{bmatrix}\\
+        &= 
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+
+\paragraph[short]{} {
+    Projecting a spin down state onto a spin up state will not change the state since we cannot pass a photon already in a spin up state to a spin down state in the Stern Gerlach experiment.
+}
+\begin{align*}
+    \begin{split}
+        P_\uparrow P_\downarrow &=
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix} \\
+        &=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{bmatrix}\\
+        &= 0 \\
+    \end{split}
+\end{align*}
+
+\paragraph[short]{} {
+    Similar to the previous case, a particle already in a spin down state cannot go to a spin up state once it passes through the Stern Gerlach experiment.
+}
 
 \begin{align*}
     \begin{split}
+        P_\downarrow P_\uparrow &=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 0
+        \end{bmatrix} \\
+        &=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{bmatrix} \\
+         &= 0 \\
+    \end{split}
+\end{align*}
+
+\paragraph[short]{} {
+    Like the first case, projecting a spin down state onto a spin down particle keeps the particle in a spin down state.
+}
+\begin{align*}
+    \begin{split}
+        P_\downarrow^2 = P_\downarrow P_\downarrow &=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix} \\
+        &=
+        \begin{bmatrix}
+            0 + 0 & 0 + 0 \\
+            0 + 0 & 0 + 1
+        \end{bmatrix} \\
+        &=
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & 1
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+
+\section*{Question 2d}
+$\text{Let } P_0 \text{ be the mapping of } \ket{0} \text{ onto } \ket{0} = \ket{0}\bra{0} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix}$ \\
+$\text{Let } P_1\text{ be the mapping of } \ket{1} \text{ onto } -\ket{1} = -\ket{1}\bra{1} = -\begin{bmatrix} 0 \\ 1 \end{bmatrix} \begin{bmatrix} 0 & 1 \end{bmatrix}$ \\\\
+Projection operators are complete, meaning $\sum_{i = 1}^{\infty} \ket{i}\bra{i} = I \text{, where I is the identity matrix}$ \\\\
+\textbf{Dirac Notation:}
+\begin{align*}
+    \begin{split}
+        P_0 + P_1 &= \ket{0}\bra{0} - \ket{1}\bra{1} \\
+        &= \ket{\uparrow}\bra{\uparrow} - \ket{\downarrow}\bra{\downarrow} \rightarrow \text{Z Pauli matrix } (\sigma_z)\\
+        &= \begin{bmatrix}
+            1 & 0 \\
+            0 & -1
+        \end{bmatrix}\\
+    \end{split}
+\end{align*}
+\textbf{Matrix Notation:}
+\begin{align*}
+    \begin{split}
+        P_0 + P_1 &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} - \begin{bmatrix} 0 \\ 1 \end{bmatrix} \begin{bmatrix} 0 & 1 \end{bmatrix} \\
+        & = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} - \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \\
+        &= \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \\
+    \end{split}
+\end{align*}
+\text{Eigenvalues:}
+\begin{align*}
+    \begin{split}
+        det((P_0 + P_1)- \lambda I)
+        &=
+        \begin{bmatrix}
+            1 - \lambda & 0 \\
+            0 & -1 - \lambda
+        \end{bmatrix} \\
+        &= (\lambda - 1)(- \lambda - 1) \\
+        \lambda_1 &= 1 \\
+        \lambda_2 &= -1 \\
+    \end{split}
+\end{align*}
+\text{Eigenvectors/Eigenstates:}
+\begin{align*}
+    \begin{split}
+        \lambda = 1: \\
+        \begin{bmatrix}
+            1 - 1  & 0 \\
+            0 & -1 - 1
+        \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+        \begin{bmatrix}
+            0 & 0 \\
+            0 & -2
+        \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+        \begin{bmatrix} 0 \\ -2v_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\\\
+        -2v_2 = 0 \text{ and } v_1 \text{ is free so the eigenvector is } \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \ket{0} \\\\\\
+        \lambda = -1: \\
+        \begin{bmatrix}
+            1 - (-1)  & 0 \\
+            0 & -1 - (-1)
+        \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+        \begin{bmatrix}
+            2 & 0 \\
+            0 & 0
+        \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+        \begin{bmatrix} 2v_1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\\\
+        2v_1 = 0 \text{ and } v_2 \text{ is free so the eigenstate is } \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \ket{1} \\
+    \end{split}
+\end{align*}
+
+\newpage
+
+\section*{Question 3a}
+$ \text{Entanglement means that the state is not a product state (ie. a product state means the state is seperable; }\ket{c} = \ket{a} \otimes \ket{b})$
+\[
+    \alpha = ab, \beta = ac, \gamma = bc, \delta = bd
+\]
+\[
+    \alpha \delta = \beta \gamma
+\]
+Where:
+\begin{align*}
+    \ket{\psi} = \alpha \ket{00} + \beta \ket{01} + \gamma \ket{10} + \delta \ket{11}
+\end{align*}
+\textbf{Bell states:}
+\begin{align*}
+    \begin{split}
+        \ket{\phi^\pm} &= \frac{1}{\sqrt{2}} \ket{00} \pm \frac{1}{\sqrt{2}} \ket{11} \\
+        \ket{\Psi^\pm} &= \frac{1}{\sqrt{2}} \ket{01} \pm \frac{1}{\sqrt{2}} \ket{10} \\\\
+    \end{split}
+\end{align*}
+\paragraph[short]{}{
+    In order to get the $\ket{\phi^\pm}$ Bell state, $\beta$ and $\gamma$ need to be 0, and $\alpha$ and $\delta$ must be non-zero. 
+    However, the equality $\alpha \delta = \beta \gamma$ must hold to be seperable. Since $\alpha \delta \not= 0$ and $\beta \gamma = 0$, 
+    this Bell state is not seperable. \\\\
+    For the  $\ket{\Psi^\pm}$ Bell state, $\alpha$ and $\delta$ need to be 0, and $\beta$ and $\delta$ must be non-zero. 
+    The same problem happens; the equality $\alpha \delta = \beta \gamma$ does not hold since $\alpha \delta = 0$ and $\beta \gamma \not= 0$. 
+    This Bell state is also not seperable.
+}
+
+\section*{Question 3b}
+
+
+\[
+    \text{Tensor product: } \begin{bmatrix} a \\ b \end{bmatrix} \otimes \begin{bmatrix} c \\ d \end{bmatrix} = \begin{bmatrix} ac \\ ad \\ bc \\ bd \end{bmatrix}
+\] \\\\
+\begin{align*}
+    \begin{split}
+        \ket{00} &= \ket{0} \otimes \ket{0} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 1(1) \\ 1(0) \\ 0(1) \\ 0(0) \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\\
+        \ket{01} &= \ket{0} \otimes \ket{1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1(0) \\ 1(1) \\ 0(0) \\ 0(1) \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\\
+        \ket{10} &= \ket{1} \otimes \ket{0} = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0(1) \\ 0(0) \\ 1(1) \\ 1(0) \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0  \end{bmatrix}\\
+        \ket{11} &= \ket{1} \otimes \ket{1} = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 0(0) \\ 0(1) \\ 1(0) \\ 1(1) \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\\
+    \end{split}
+\end{align*}
+\begin{align*}
+    \begin{split}
+        \ket{\phi^+} &= \frac{1}{\sqrt{2}}\left[ \ket{00} + \ket{11}\right] = \frac{1}{\sqrt{2}}\left[\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\right] = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 0 \\ 1\end{bmatrix}\\
+        \ket{\phi^-} &= \frac{1}{\sqrt{2}}\left[ \ket{00} - \ket{11}\right] = \frac{1}{\sqrt{2}}\left[\begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} - \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\right] = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 0 \\ -1\end{bmatrix}\\
+        \ket{\Psi^+} &= \frac{1}{\sqrt{2}}\left[ \ket{10} + \ket{01}\right] = \frac{1}{\sqrt{2}}\left[\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}\right] = \frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ 1 \\ 1 \\ 0\end{bmatrix}\\
+        \ket{\Psi^-} &= \frac{1}{\sqrt{2}}\left[ \ket{10} - \ket{01}\right] = \frac{1}{\sqrt{2}}\left[\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix} - \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}\right] = \frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ 1 \\ -1 \\ 0\end{bmatrix}\\
     \end{split}
 \end{align*}
 
