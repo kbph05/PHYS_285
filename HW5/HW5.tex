@@ -10,4 +10,89 @@
 \begin{document}
 \maketitle
 
+\section*{Question 1a}
+
+% Problem-solving strategy: 
+To show that the Pauli matrices are unitary, we show that $U^\dagger U = I$ by using the fact that they are Hermitian and their squares equal the identity.
+We determine the form of the eigenvalues by applying the unitary property to the inner product of an eigenvector with itself, showing that the transformation preserves the norm. \\
+
+The Pauli matrices are Hermitian, meaning $\sigma_i^\dagger = \sigma_i$. We show they are unitary knowing $\sigma_i^\dagger \sigma_i = \sigma_i^2 = I$: \\
+
+\begin{align*}
+\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \quad \sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, \quad \sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \\
+\sigma_x^\dagger \sigma_x &= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I \\
+\sigma_y^\dagger \sigma_y &= \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} = \begin{bmatrix} (-i)(i) & 0 \\ 0 & (i)(-i) \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I \\
+\sigma_z^\dagger \sigma_z &= \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I
+\end{align*}
+
+\section*{Question 1b}
+% Problem-solving strategy:
+Let $\ket{v}$ be an eigenvector of a unitary matrix $U$ with eigenvalue $\lambda$, such that $U\ket{v} = \lambda \ket{v}$. Taking the adjoint, we have $\bra{v} U^\dagger = \lambda^* \bra{v}$.
+
+\begin{align*}
+U|v\rangle &= \lambda |v\rangle \\
+\langle v| U^\dagger U |v\rangle &= \langle v | \lambda^* \lambda |v\rangle \\
+\langle v | I | v \rangle &= |\lambda|^2 \langle v | v \rangle \\
+1 &= |\lambda|^2 \\
+\lambda &= e^{i\theta}
+\end{align*}
+
+Since $|\lambda|^2 = 1$, the absolute value of the eigenvalue must be $|\lambda| = 1$. In the complex plane, any number with a magnitude of 1 can be written in polar form as $\lambda = e^{i\theta}$ for some real $\theta$. \\
+
+\newpage
+\section*{Question 2}
+
+Given $\rho = p_1 |\psi_1\rangle\langle\psi_1| + (1-p_1) |\psi_2\rangle\langle\psi_2|$, we determine the purity $Tr(\rho^2)$.
+
+\begin{align*}
+Tr(\rho^2) &= p_1^2 + (1-p_1)^2 \\
+&= p_1^2 + (1 - 2p_1 + p_1^2) \\
+&= 2p_1^2 - 2p_1 + 1
+\end{align*}
+
+Complete the square to find the minimum:
+\begin{align*}
+Tr(\rho^2) &= 2\left(p_1^2 - p_1 + \frac{1}{4}\right) + \frac{1}{2} \\
+&= 2\left(p_1 - \frac{1}{2}\right)^2 + \frac{1}{2}
+\end{align*}
+
+Since the squared term $2(p_1 - 1/2)^2$ is $\geq 0$, the smallest possible value for the expression is $1/2$. This occurs when $p_1 = 1/2$, representing a maximally mixed state.
+\newpage
+\section*{Question 3a}
+
+% Problem-solving strategy:
+Unpolarized state as a statistical mixture of basis states:
+
+\begin{align*}
+\rho &= \frac{1}{2} \ket{\uparrow}\bra{\uparrow} + \frac{1}{2} \ket{\downarrow}\bra{\downarrow} \\
+&= \frac{1}{2} \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} + \frac{1}{2} \begin{bmatrix} 0 \\ 1 \end{bmatrix} \begin{bmatrix} 0 & 1 \end{bmatrix} \\
+&= \frac{1}{2} \left( \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} + \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} \right) = \frac{1}{2} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \frac{1}{2} I
+\end{align*}
+
+\section*{Question 3b}
+Using the change of basis formulas $|+\rangle = \frac{1}{\sqrt{2}}(|\uparrow\rangle + |\downarrow\rangle)$ and $|-\rangle = \frac{1}{\sqrt{2}}(|\uparrow\rangle - |\downarrow\rangle)$ \\
+
+\textbf{unpolarized density matrix in the $x$-basis:}
+
+\begin{align*}
+\rho &= \frac{1}{2} |+\rangle\langle+| + \frac{1}{2} |-\rangle\langle-| \\
+&= \frac{1}{2} \left( \frac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} + \frac{1}{2} \begin{bmatrix} 1 \\ -1 \end{bmatrix} \begin{bmatrix} 1 & -1 \end{bmatrix} \right) \\
+&= \frac{1}{4} \left( \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} + \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix} \right) \\
+&= \frac{1}{4} \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = \frac{1}{2} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \frac{1}{2} I
+\end{align*}
+
+This shows that a completely unpolarized beam is invariant under a change of basis and looks the same in both the $z$ and $x$ directions.
+
+\section*{Question 3c}
+% Problem-solving strategy: We first provide a qualitative physical argument based on symmetry and then confirm the result using the trace of the product of the density matrix and spin operators.
+
+Since the beam is completely unpolarized, there is no preferred direction for the spin. In a Stern-Gerlach experiment, it is expected that 50\% of the particles are measured as "spin up" and 50\% as "spin down" along any chosen axis. The average (expectation value) of these outcomes must therefore be zero.
+
+\begin{align*}
+\langle S_z \rangle &= Tr(\rho S_z) = Tr\left( \frac{1}{2} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \frac{\hbar}{2} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \right) \\
+&= \frac{\hbar}{4} Tr \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} = \frac{\hbar}{4} (1 - 1) = 0 \\\\
+\langle S_x \rangle &= Tr(\rho S_x) = Tr\left( \frac{1}{2} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \frac{\hbar}{2} \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \right) \\
+&= \frac{\hbar}{4} Tr \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \frac{\hbar}{4} (0 + 0) = 0
+\end{align*}
+
 \end{document}
